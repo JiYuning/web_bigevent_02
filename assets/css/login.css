@@ -30,3 +30,14 @@ html,body{
 .links a{
     font-size: 12px;
 }
+.layui-form-item {
+    position: relative;
+}
+.layui-form-item i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.layui-form-item input{
+    padding-left: 32px;
+}
