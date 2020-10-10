@@ -15,25 +15,25 @@ function getuserinfo() {
     $.ajax({
         type: 'get',
         url: '/my/userinfo',
-        headers: {
+        /* headers: {
             Authorization: localStorage.getItem('token') || ''
-        },
+        }, */
         success: function (res) {
             // console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg(res.message)
             }
             imgRender(res.data)
-        },
+        }
         // status: 0, message: "获取用户基本信息成功！"
-        complete: function (res) {
+        /* complete: function (res) {
             // console.log(res);
             var user = res.responseJSON
-            if (user.status !== 0 || user.message !== "获取用户基本信息成功！") {
+            if (user.status === 1 || user.message === "获取用户基本信息成功！") {
                 localStorage.removeItem('token')
                 location.href = '/login.html'
             }
-        }
+        } */
 
     })
 }
